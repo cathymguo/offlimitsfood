@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OffLimitsFood - Vote With Your Wallet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,314 +13,414 @@
         }
         
         body {
-            font-family: 'Fredoka', sans-serif;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 25%, #FF6347 50%, #FF4500 75%, #FFD700 100%);
-            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: #fafafa;
             color: #1a1a1a;
-            line-height: 1.8;
+            line-height: 1.6;
         }
         
         header {
-            background: linear-gradient(135deg, #001f3f 0%, #0056a3 100%);
-            padding: 70px 20px;
+            background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+            border-bottom: 1px solid #e0e0e0;
+            padding: 40px 20px;
             text-align: center;
-            border: 5px solid #FFD700;
-            border-radius: 25px;
-            margin: 25px;
-            box-shadow: 15px 15px 0 rgba(0,0,0,0.25);
-            position: relative;
         }
         
-        header::before {
-            content: '🐙';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 40px;
-            opacity: 0.7;
-            transform: rotate(-15deg);
-        }
-        
-        header::after {
-            content: '🐙';
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            font-size: 40px;
-            opacity: 0.7;
-            transform: rotate(15deg);
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .logo {
-            font-size: 80px;
-            margin-bottom: 15px;
-            animation: bounce 2s ease-in-out infinite;
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+            color: #1a1a1a;
         }
         
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        
-        header h1 {
-            font-family: 'Comfortaa', cursive;
-            font-size: 56px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            color: #FFD700;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            transform: skewY(-2deg);
-            text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+        .ascii-plate {
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            line-height: 1.2;
+            color: #666;
+            margin: 15px 0;
+            letter-spacing: 2px;
+            display: inline-block;
         }
         
         .tagline {
-            font-family: 'Comfortaa', cursive;
+            font-family: 'Playfair Display', serif;
             font-size: 28px;
-            font-weight: 600;
-            color: white;
-            letter-spacing: 1px;
-            line-height: 1.5;
-            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-top: 20px;
+            color: #1a1a1a;
+            line-height: 1.4;
         }
         
         .container {
-            max-width: 1100px;
-            margin: 50px auto;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 0 20px;
         }
         
         .intro-section {
             background: white;
-            border: 5px solid #1a1a1a;
-            border-radius: 20px;
-            padding: 50px;
-            margin-bottom: 50px;
-            box-shadow: 15px 15px 0 rgba(0,0,0,0.2);
-            position: relative;
-        }
-        
-        .intro-section::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 40px;
-            width: calc(100% - 80px);
-            height: 10px;
-            background: linear-gradient(90deg, #FFD700 0%, #FF6347 50%, #0074cc 100%);
-            border-radius: 5px;
+            padding: 60px 40px;
+            margin: 60px auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
         }
         
         .intro-section h2 {
-            font-family: 'Comfortaa', cursive;
-            font-size: 42px;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
             margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 4px solid #FFD700;
-            padding-bottom: 15px;
-            color: #0074cc;
-            transform: skewY(-1deg);
-        }
-        
-        .intro-section p {
-            font-size: 17px;
-            margin-bottom: 20px;
-            line-height: 2;
-        }
-        
-        strong {
-            color: #FF6347;
+            color: #1a1a1a;
             font-weight: 700;
         }
         
-        .mission-highlight {
-            background: linear-gradient(135deg, #E8F4F8 0%, #D4E9F2 100%);
-            border: 3px solid #0074cc;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 30px 0;
-            font-size: 17px;
-            line-height: 1.9;
-            box-shadow: 8px 8px 0 rgba(0,116,204,0.2);
+        .intro-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.8;
         }
         
-        .mission-highlight strong {
-            color: #0074cc;
-            font-size: 18px;
+        strong {
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        .mission-highlight {
+            background: #f8f8f8;
+            border-left: 3px solid #1a1a1a;
+            padding: 20px;
+            margin: 30px 0;
+            font-size: 16px;
+            line-height: 1.8;
         }
         
         .expansion-message {
-            background: linear-gradient(135deg, #FFF8DC 0%, #FFFACD 100%);
-            border: 3px solid #FFD700;
-            border-radius: 15px;
+            background: #f0f0f0;
+            border: 1px solid #d0d0d0;
             padding: 20px;
             margin: 25px 0;
-            font-size: 15px;
-            font-weight: 600;
+            font-size: 14px;
             text-align: center;
-            color: #1a1a1a;
-            box-shadow: 6px 6px 0 rgba(255,215,0,0.2);
+            color: #666;
+            border-radius: 6px;
         }
         
-        nav {
-            background: white;
-            border: 5px solid #1a1a1a;
-            border-radius: 20px;
-            margin: 60px auto;
-            box-shadow: 15px 15px 0 rgba(0,0,0,0.2);
-            overflow: hidden;
+        .nav-section {
+            margin: 80px auto;
         }
         
-        nav h3 {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        .nav-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 30px;
             color: #1a1a1a;
-            padding: 20px;
-            font-family: 'Comfortaa', cursive;
-            font-size: 22px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 4px solid #1a1a1a;
+            text-align: center;
             font-weight: 700;
         }
         
         .nav-links {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         
         .nav-links a {
             display: block;
-            padding: 30px 20px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 40px 25px;
             text-decoration: none;
             color: #1a1a1a;
-            border-right: 3px solid #f0f0f0;
-            border-bottom: 3px solid #f0f0f0;
-            transition: all 0.3s;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
+            transition: all 0.3s ease;
             text-align: center;
-            position: relative;
-        }
-        
-        .nav-links a:last-child {
-            border-right: none;
-        }
-        
-        .nav-links a .icon {
-            display: block;
-            font-size: 40px;
-            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
         
         .nav-links a:hover {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            transform: scale(1.05);
-            box-shadow: inset 0 0 10px rgba(255,215,0,0.3);
+            border-color: #1a1a1a;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
         }
         
-        .cta-button {
-            background: linear-gradient(135deg, #FF6347 0%, #FF4500 100%);
-            color: white;
-            padding: 18px 35px;
-            border: 3px solid #1a1a1a;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 25px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            transition: all 0.3s;
+        .nav-links a .label {
+            font-size: 12px;
             text-transform: uppercase;
-            font-size: 15px;
-            box-shadow: 8px 8px 0 rgba(0,0,0,0.15);
-            font-family: 'Fredoka', sans-serif;
+            letter-spacing: 1.5px;
+            color: #999;
+            margin-bottom: 12px;
+            display: block;
         }
         
-        .cta-button:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 11px 11px 0 rgba(0,0,0,0.2);
+        .nav-links a .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: block;
         }
         
-        .footer-section {
-            background: white;
-            border: 4px solid #1a1a1a;
-            border-radius: 20px;
-            padding: 40px;
-            margin: 60px auto;
+        .nav-links a .description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .coming-soon-section {
+            margin: 80px auto;
+        }
+        
+        .coming-soon-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #1a1a1a;
             text-align: center;
-            box-shadow: 12px 12px 0 rgba(0,0,0,0.15);
+            font-weight: 700;
         }
         
-        .footer-section p {
+        .coming-soon-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        
+        .coming-soon-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+        }
+        
+        .coming-soon-item:hover {
+            border-color: #1a1a1a;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        
+        .coming-soon-item .badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #999;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .coming-soon-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        
+        .coming-soon-item p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .join-movement {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 60px 40px;
+            margin: 80px auto;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+        
+        .join-movement .headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #FF6347;
+            margin-bottom: 20px;
+        }
+        
+        .join-movement p {
             font-size: 16px;
+            color: #666;
             margin-bottom: 15px;
             line-height: 1.8;
         }
         
-        footer {
-            background: linear-gradient(135deg, #001f3f 0%, #0056a3 100%);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 50px;
-            font-size: 14px;
-            letter-spacing: 1px;
-            border-top: 4px solid #FFD700;
-            font-weight: 600;
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
         }
         
-        footer p {
-            margin-bottom: 10px;
+        .social-link {
+            display: inline-block;
+            background: #1a1a1a;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid #1a1a1a;
+        }
+        
+        .social-link:hover {
+            background: white;
+            color: #1a1a1a;
+        }
+        
+        .contact-link {
+            display: inline-block;
+            background: transparent;
+            color: #666;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.3s;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid #d0d0d0;
+            margin-top: 15px;
+        }
+        
+        .contact-link:hover {
+            border-color: #1a1a1a;
+            color: #1a1a1a;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 80px;
+            border-top: 1px solid #333;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .footer-brand a {
+            color: #f0f0f0;
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .footer-brand a:hover {
+            color: #ddd;
+        }
+        
+        .footer-tagline {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #f0f0f0;
         }
         
         .divider {
-            height: 4px;
-            background: linear-gradient(90deg, #FFD700 0%, #FF6347 50%, #0074cc 100%);
-            margin: 30px 0;
-            border-radius: 2px;
+            width: 40px;
+            height: 1px;
+            background: #333;
+            margin: 15px auto;
         }
         
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 36px;
+            .logo {
+                font-size: 32px;
             }
             
             .tagline {
-                font-size: 20px;
+                font-size: 22px;
             }
             
             .intro-section {
-                padding: 30px;
+                padding: 30px 20px;
             }
             
             .intro-section h2 {
-                font-size: 28px;
-            }
-            
-            nav h3 {
-                font-size: 18px;
+                font-size: 26px;
             }
             
             .nav-links a {
-                padding: 20px 15px;
-                font-size: 13px;
+                padding: 30px 20px;
             }
             
-            .nav-links a .icon {
-                font-size: 30px;
+            .nav-links a .title {
+                font-size: 20px;
+            }
+            
+            .join-movement {
+                padding: 40px 20px;
+            }
+            
+            .join-movement .headline {
+                font-size: 24px;
+            }
+            
+            .footer-links {
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">🐙</div>
-        <h1>OffLimitsFood</h1>
-        <div class="tagline">Vote with your wallet.<br>Support a future of your dreams.</div>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: #1a1a1a;">OFFLIMITSFOOD</a>
+            </div>
+            <pre class="ascii-plate">  ___________
+ / - o - o - \
+|  ( food )   |
+ \___________/</pre>
+            <div class="tagline">Vote with your wallet.<br>Support a future of your dreams.</div>
+        </div>
     </header>
     
     <div class="container">
@@ -333,7 +433,7 @@
             </p>
             
             <div class="mission-highlight">
-                <strong>🐙 Phase One: Octopus-Free Dining</strong><br>
+                <strong>Phase One: Octopus-Free Dining</strong><br>
                 We're starting with octopuses—intelligent, sentient beings who deserve our respect. Sydney's first directory of restaurants 
                 that refuse to serve them. Find restaurants aligned with your compassion.
             </div>
@@ -342,60 +442,91 @@
                 But this is just the beginning. Your food choices say something about your beliefs—whether that's about animal welfare, 
                 environmental impact, labour practices, or anything else that matters to you.
             </p>
-            
-            <div class="expansion-message">
-                🌱 Coming Soon: Seed oil-free • 🌊 Sustainable seafood • 🤝 Ethical sourcing • And more categories chosen by our community
-            </div>
-            
-            <p style="margin-top: 25px; font-size: 15px; font-weight: 600;">
-                Ready to participate? Get your restaurant verified free. Get a window sticker. Show your values.
-            </p>
-            
-            <a href="about.html" class="cta-button">Learn Our Story</a>
         </div>
-        
-        <nav>
-            <h3>🗺️ Get Started</h3>
+    </div>
+    
+    <div class="container">
+        <div class="nav-section">
+            <h3>Get Started</h3>
             <div class="nav-links">
+                <a href="about.html">
+                    <span class="label">~ Learn ~</span>
+                    <span class="title">Our Story</span>
+                    <span class="description">Discover why we started this movement and what octopuses really mean to us.</span>
+                </a>
                 <a href="restaurants.html">
-                    <span class="icon">🍽️</span>
-                    Find Restaurants
+                    <span class="label">~ For Consumers ~</span>
+                    <span class="title">Find Restaurants</span>
+                    <span class="description">Browse Sydney's octopus-free dining options and vote with your wallet.</span>
                 </a>
                 <a href="submit.html">
-                    <span class="icon">✓</span>
-                    Get Verified
-                </a>
-                <a href="about.html">
-                    <span class="icon">ℹ️</span>
-                    Our Story
-                </a>
-                <a href="blog.html">
-                    <span class="icon">📝</span>
-                    Resources
+                    <span class="label">~ For Restaurants ~</span>
+                    <span class="title">Get Verified</span>
+                    <span class="description">Get listed, gain visibility, and attract conscious diners to your venue.</span>
                 </a>
             </div>
-        </nav>
-        
-        <div class="footer-section">
-            <h3 style="font-family: 'Comfortaa', cursive; font-size: 28px; color: #0074cc; margin-bottom: 20px; text-transform: uppercase;">Join the Movement</h3>
-            <p>
-                <strong style="color: #FF6347;">Your dining choices matter.</strong> Help us build a community where ethical eating is the norm, 
-                not the exception.
-            </p>
-            <p>
-                Follow us, find restaurants, or get your venue listed today.
-            </p>
-            <p style="margin-top: 20px;">
-                <a href="https://www.instagram.com/offlimitsfood/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #1a1a1a; padding: 14px 28px; text-decoration: none; font-weight: 700; border: 3px solid #1a1a1a; border-radius: 50px; transition: all 0.3s; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 6px 6px 0 rgba(0,0,0,0.1);">📱 Follow @offlimitsfood</a>
-            </p>
         </div>
-
+    </div>
+    
+    <div class="container">
+        <div class="coming-soon-section">
+            <h3>Coming Soon</h3>
+            <div class="coming-soon-content">
+                <div class="coming-soon-item">
+                    <span class="badge">~ Coming Soon ~</span>
+                    <h4>Learning Space</h4>
+                    <p>Discover your power as a conscious consumer. Learn about smart consumption, sustainable choices, and how to vote for the future you believe in.</p>
+                </div>
+                <div class="coming-soon-item">
+                    <span class="badge">~ Coming Soon ~</span>
+                    <h4>Seed Oil-Free</h4>
+                    <p>Restaurants that care about your health. Discover venues committed to using quality ingredients for your wellbeing.</p>
+                </div>
+                <div class="coming-soon-item">
+                    <span class="badge">~ Coming Soon ~</span>
+                    <h4>Sustainable Seafood</h4>
+                    <p>Ocean-conscious dining. Find restaurants that prioritize environmental impact and ethical fishing practices.</p>
+                </div>
+                <div class="coming-soon-item">
+                    <span class="badge">~ Coming Soon ~</span>
+                    <h4>Ethical Sourcing</h4>
+                    <p>Support businesses with transparent, fair-trade supply chains that respect people and the planet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="join-movement">
+            <div class="headline">Your Dining Choices Matter</div>
+            <p>
+                Help us build a community where ethical eating is the norm, not the exception.
+            </p>
+            <p style="font-size: 14px; color: #999;">
+                Ready to participate? Find restaurants, get your venue listed, or learn how you can make a difference.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://www.instagram.com/offlimitsfood/" target="_blank" class="social-link">📱 Follow @OffLimitsFood</a>
+            </div>
+            <a href="mailto:hello@offlimitsfood.com" class="contact-link">✉ Contact Us</a>
+        </div>
     </div>
     
     <footer>
-        <p><strong>🐙 OffLimitsFood</strong> — Conscious eating for Sydney</p>
-        <p>Vote with your wallet. Support restaurants that match your values.</p>
-        <p style="margin-top: 15px; font-size: 12px;">Built on the belief that ethical eating is possible. Coming soon to your city.</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html">OffLimitsFood</a>
+            </div>
+            <div class="footer-tagline">Conscious eating for Sydney</div>
+            <div class="divider"></div>
+            <div class="footer-links">
+                <a href="about.html">Our Story</a>
+                <a href="restaurants.html">Find Restaurants</a>
+                <a href="submit.html">Get Verified</a>
+                <a href="https://www.instagram.com/offlimitsfood/" target="_blank">Follow Us</a>
+                <a href="mailto:hello@offlimitsfood.com">Contact</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
