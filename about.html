@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - OffLimitsFood</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #faf7f2;
+            color: #2c2c2c;
+            line-height: 1.8;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #d4a574 0%, #b8956a 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid #2c2c2c;
+        }
+        
+        header h1 {
+            font-size: 48px;
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            font-style: italic;
+            color: #2c2c2c;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero-section {
+            background: white;
+            border: 2px solid #2c2c2c;
+            margin: 50px auto;
+            padding: 50px;
+            box-shadow: 10px 10px 0 rgba(212, 165, 116, 0.2);
+            position: relative;
+        }
+        
+        .hero-emoji {
+            font-size: 80px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .hero-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 3px solid #d4a574;
+            padding-bottom: 15px;
+        }
+        
+        .hero-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.9;
+        }
+        
+        strong {
+            color: #b8956a;
+            font-weight: 700;
+        }
+        
+        .story-section {
+            background: white;
+            border: 2px solid #2c2c2c;
+            margin: 40px auto;
+            padding: 40px;
+            box-shadow: 10px 10px 0 rgba(212, 165, 116, 0.2);
+        }
+        
+        .story-section h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #d4a574;
+            padding-bottom: 10px;
+        }
+        
+        .story-content p {
+            margin-bottom: 18px;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        
+        .fact-box {
+            background: #fff9e6;
+            border-left: 5px solid #d4a574;
+            padding: 20px;
+            margin: 25px 0;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        .fact-box strong {
+            color: #b8956a;
+        }
+        
+        .documentary-link {
+            background: #f5f5f5;
+            border: 2px dashed #d4a574;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .documentary-link a {
+            display: inline-block;
+            color: #2c2c2c;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: 2px solid #2c2c2c;
+            transition: all 0.3s;
+        }
+        
+        .documentary-link a:hover {
+            background: #d4a574;
+            transform: translateY(-2px);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #d4a574 0%, #b8956a 100%);
+            border: 3px solid #2c2c2c;
+            padding: 50px;
+            margin: 60px auto;
+            text-align: center;
+            box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+        }
+        
+        .cta-section h3 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #2c2c2c;
+        }
+        
+        .cta-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #2c2c2c;
+            padding: 18px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #2c2c2c;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: #2c2c2c;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .social-section {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #2c2c2c;
+        }
+        
+        .social-section p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #2c2c2c;
+        }
+        
+        .social-link {
+            display: inline-block;
+            background: #2c2c2c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: all 0.3s;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .social-link:hover {
+            background: #d4a574;
+            color: #2c2c2c;
+            transform: translateY(-2px);
+        }
+        
+        .journey {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f5f5f5;
+            border-left: 4px solid #d4a574;
+        }
+        
+        .journey strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        footer {
+            background: #2c2c2c;
+            color: #faf7f2;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 80px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+        
+        em {
+            color: #b8956a;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section,
+            .story-section,
+            .cta-section {
+                padding: 25px;
+                box-shadow: 8px 8px 0 rgba(212, 165, 116, 0.2);
+            }
+            
+            header h1 {
+                font-size: 32px;
+            }
+            
+            .hero-emoji {
+                font-size: 60px;
+            }
+            
+            .cta-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OffLimitsFood</h1>
+        <div class="subtitle">The story behind the movement</div>
+    </header>
+    
+    <div class="container">
+        <div class="hero-section">
+            <div class="hero-emoji">🐙</div>
+            <h2>Why I Started This</h2>
+            <p>
+                I couldn't keep quiet anymore. After learning who octopuses really are, 
+                I realized: <strong>I can't eat them. And I won't support restaurants that do.</strong>
+            </p>
+            <p>
+                This is my story. And it could be the start of something bigger.
+            </p>
+        </div>
+        
+        <div class="story-section">
+            <h3>🤿 A Diver's Connection</h3>
+            
+            <div class="story-content">
+                <p>
+                    I've spent my life in the ocean. As a scuba diver and nature lover, I've witnessed things most people never get to see. 
+                    But nothing prepared me for what I learned about <strong>octopuses</strong>.
+                </p>
+                
+                <p>
+                    These aren't just animals. They're <strong>conscious beings</strong> with intelligence that rivals mammals. They solve puzzles. 
+                    They use tools. They play. They grieve. They feel pain.
+                </p>
+                
+                <div class="documentary-link">
+                    <p style="margin-bottom: 15px;"><strong>Watch this and everything changes:</strong></p>
+                    <a href="https://www.netflix.com/title/80230654" target="_blank">Watch "My Octopus Teacher" on Netflix</a>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666;">A documentary about a filmmaker's year-long relationship with a wild octopus. It will reshape how you see these creatures.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="story-section">
+            <h3>💛 Meet the Real Octopus</h3>
+            
+            <div class="fact-box">
+                <strong>🧠 Intelligence:</strong> Octopuses have nine brains—one central brain and a mini-brain in each arm. They solve mazes, use camouflage strategically, and remember individual humans.
+            </div>
+            
+            <div class="fact-box">
+                <strong>👶 Parenting & Survival:</strong> Most octopus mothers die immediately after their eggs hatch—they never meet their babies. Yet these young octopuses survive alone in a vast, dangerous ocean. They are <strong>brave beyond measure</strong>, growing up entirely self-sufficient, learning to hunt and hide without ever being taught. And they do it with hearts full of intelligence and curiosity.
+            </div>
+            
+            <div class="fact-box">
+                <strong>🚪 Shape-Shifters:</strong> An octopus can squeeze through any opening its beak can fit through. Imagine being that flexible, that adaptable, that incredible.
+            </div>
+            
+            <div class="fact-box">
+                <strong>🎨 Masters of Disguise:</strong> They change color and texture in milliseconds—not just to hide, but to communicate emotion. They feel. They express. They exist.
+            </div>
+        </div>
+        
+        <div class="story-section">
+            <h3>🛑 Why I Can't Support This</h3>
+            
+            <div class="story-content">
+                <p>
+                    Knowing what I know now, I cannot eat octopus. <strong>How could I?</strong>
+                </p>
+                
+                <p>
+                    But the problem goes deeper. The practice of eating octopus is fundamentally cruel:
+                </p>
+                
+                <div class="journey">
+                    <strong>🇯🇵 In Japan and Korea:</strong> Octopuses are eaten alive in a dish called nakichi or sannakji—their arms still moving as diners eat them. The octopus experiences every moment of it.
+                </div>
+                
+                <div class="journey">
+                    <strong>🔥 Baby Octopus:</strong> Tiny, intelligent babies are thrown directly onto grills. Full consciousness. Full awareness. No mercy.
+                </div>
+                
+                <div class="journey">
+                    <strong>🌍 Globally:</strong> Thousands of restaurants serve octopus daily, treating these sentient beings as if they were no different from vegetables.
+                </div>
+                
+                <p style="margin-top: 25px;">
+                    <strong>I upgraded my stance.</strong> It wasn't enough to just not order octopus myself. I needed to vote with my wallet—to refuse to support ANY restaurant that does. 
+                </p>
+            </div>
+        </div>
+        
+        <div class="story-section">
+            <h3>✨ Your Beliefs Matter</h3>
+            
+            <div class="story-content">
+                <p>
+                    You have power. Every restaurant choice you make sends a message. When you eat where your values are respected, 
+                    you're telling business owners: <em>"This is what I believe in. This is who I want to support."</em>
+                </p>
+                
+                <p>
+                    <strong>That's why OffLimitsFood exists.</strong> Not to judge. But to help you find restaurants that align with your heart.
+                </p>
+                
+                <p>
+                    We start with octopus. But this is bigger than one animal. It's about:
+                </p>
+                
+                <ul style="margin: 20px 0 20px 30px; line-height: 2;">
+                    <li>🌱 Choosing restaurants that respect the ocean</li>
+                    <li>💚 Supporting businesses that care about animal welfare</li>
+                    <li>🌍 Voting for a world that matches your values</li>
+                    <li>🤝 Building community with like-minded people</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h3>Ready to Vote With Your Wallet?</h3>
+            
+            <p style="font-size: 18px; margin-bottom: 30px; color: #2c2c2c;">
+                Join us. Find restaurants that match your values. Support a future you believe in.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="restaurants.html" class="cta-button">🍽️ Find Restaurants</a>
+                <a href="submit.html" class="cta-button">✓ Get Your Restaurant Listed</a>
+            </div>
+            
+            <div class="social-section">
+                <p style="color: #2c2c2c; margin-bottom: 20px;">
+                    <strong>Stay connected. Follow our journey.</strong>
+                </p>
+                <a href="https://www.instagram.com/offlimitsfood/" target="_blank" class="social-link">Follow on Instagram</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p><strong>OffLimitsFood</strong> — Where your values meet your dining choices</p>
+        <p>Vote with your wallet. Support a future of your dreams.</p>
+    </footer>
+</body>
+</html>
