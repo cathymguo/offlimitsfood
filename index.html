@@ -3,171 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OffLimitsFood - Dine According to Your Values</title>
+    <title>OffLimitsFood - Vote With Your Wallet</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+            font-family: 'Georgia', serif;
+            background-color: #faf7f2;
+            color: #2c2c2c;
+            line-height: 1.6;
         }
-        .container {
-            background: white;
-            border-radius: 20px;
-            padding: 60px 40px;
-            max-width: 700px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        
+        header {
+            background: linear-gradient(135deg, #d4a574 0%, #b8956a 100%);
+            padding: 60px 20px;
             text-align: center;
+            border-bottom: 3px solid #2c2c2c;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+        
         .logo {
-            font-size: 64px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 42px;
-            color: #2d3748;
+            font-size: 72px;
             margin-bottom: 15px;
-            font-weight: 700;
-            letter-spacing: -1px;
         }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: normal;
+            letter-spacing: 2px;
+            color: #2c2c2c;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
         .tagline {
-            font-size: 22px;
-            color: #4a5568;
-            margin-bottom: 35px;
-            line-height: 1.5;
-            font-weight: 300;
+            font-size: 28px;
+            font-style: italic;
+            color: #2c2c2c;
+            font-weight: normal;
+            letter-spacing: 1px;
         }
-        .mission {
-            background: #f7fafc;
-            border-left: 4px solid #667eea;
-            padding: 25px;
-            margin: 35px 0;
-            text-align: left;
-            border-radius: 8px;
+        
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
-        .mission-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        
+        .intro-section {
+            background: white;
+            border: 2px solid #2c2c2c;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 8px 8px 0 rgba(212, 165, 116, 0.2);
         }
-        .mission-text {
+        
+        .intro-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #d4a574;
+            padding-bottom: 15px;
+        }
+        
+        .intro-section p {
             font-size: 16px;
-            color: #4a5568;
-            line-height: 1.7;
+            margin-bottom: 15px;
+            line-height: 1.8;
         }
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 18px 45px;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 50px;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-        }
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 35px 0;
-        }
-        .feature {
-            background: #f7fafc;
+        
+        .mission-highlight {
+            background: #fff9e6;
+            border-left: 4px solid #d4a574;
             padding: 20px;
-            border-radius: 12px;
-            font-size: 15px;
-            color: #4a5568;
+            margin: 25px 0;
+            font-size: 16px;
         }
-        .feature-icon {
-            font-size: 32px;
+        
+        .mission-highlight strong {
+            color: #b8956a;
+        }
+        
+        .expansion-message {
+            background: #f5f5f5;
+            border: 1px solid #d4a574;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+            font-style: italic;
+            text-align: center;
+            color: #666;
+        }
+        
+        nav {
+            background: white;
+            border: 2px solid #2c2c2c;
+            margin: 60px auto;
+            max-width: 1000px;
+            box-shadow: 8px 8px 0 rgba(212, 165, 116, 0.2);
+        }
+        
+        nav h3 {
+            background: #d4a574;
+            color: #2c2c2c;
+            padding: 15px 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2c2c2c;
+        }
+        
+        .nav-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0;
+        }
+        
+        .nav-links a {
+            display: block;
+            padding: 20px;
+            text-decoration: none;
+            color: #2c2c2c;
+            border-right: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            transition: background 0.3s;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+        
+        .nav-links a:last-child {
+            border-right: none;
+        }
+        
+        .nav-links a:hover {
+            background: #fff9e6;
+            border-left: 4px solid #d4a574;
+            padding-left: 16px;
+        }
+        
+        .nav-links a .icon {
+            display: block;
+            font-size: 28px;
             margin-bottom: 8px;
         }
+        
         .coming-soon {
-            font-size: 14px;
-            color: #a0aec0;
+            background: #d4a574;
+            color: #2c2c2c;
+            padding: 12px 24px;
+            border: 2px solid #2c2c2c;
+            border-radius: 0;
+            text-decoration: none;
+            display: inline-block;
             margin-top: 30px;
-            font-style: italic;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 14px;
         }
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 25px;
-            }
+        
+        .coming-soon:hover {
+            background: #b8956a;
+            transform: translate(2px, 2px);
+            box-shadow: 6px 6px 0 rgba(212, 165, 116, 0.3);
+        }
+        
+        footer {
+            background: #2c2c2c;
+            color: #faf7f2;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 80px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
             h1 {
-                font-size: 32px;
+                font-size: 36px;
             }
+            
             .tagline {
-                font-size: 18px;
+                font-size: 22px;
             }
-            .features {
+            
+            .nav-links {
                 grid-template-columns: 1fr;
+            }
+            
+            .intro-section {
+                padding: 25px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <div class="logo">🐙</div>
         <h1>OffLimitsFood</h1>
-        <p class="tagline">Dine according to your values.<br>Support restaurants that align with your beliefs.</p>
-        
-        <div class="mission">
-            <div class="mission-title">
-                <span>💜</span>
-                <span>Our First Mission: Octopus-Free Dining</span>
-            </div>
-            <p class="mission-text">
-                Octopuses are intelligent, sentient beings capable of complex emotions and problem-solving. 
-                We're building Sydney's first directory of restaurants that choose not to serve octopus—so you can eat out knowing your values are respected.
+        <div class="tagline">Vote with your wallet.<br>Support a future of your dreams.</div>
+    </header>
+    
+    <div class="container">
+        <div class="intro-section">
+            <h2>What We're Building</h2>
+            
+            <p>
+                Every time you eat out, you're voting. Your wallet sends a message about what kind of world you want to live in. 
+                OffLimitsFood connects conscious eaters with restaurants that share your values.
             </p>
+            
+            <div class="mission-highlight">
+                <strong>🐙 Phase One: Octopus-Free Dining</strong><br>
+                We're starting with octopuses—intelligent, sentient beings who deserve our respect. Sydney's first directory of restaurants 
+                that refuse to serve them. Find restaurants aligned with your compassion.
+            </div>
+            
+            <p>
+                But this is just the beginning. Your food choices say something about your beliefs—whether that's about animal welfare, 
+                environmental impact, labour practices, or anything else that matters to you.
+            </p>
+            
+            <div class="expansion-message">
+                Coming soon: Seed oil-free • Sustainable seafood • Ethical sourcing • And more categories chosen by our community
+            </div>
+            
+            <p style="margin-top: 25px; font-size: 14px; color: #666;">
+                Ready to participate? Get your restaurant verified free. Get a window sticker. Show your values.
+            </p>
+            
+            <button class="coming-soon">Join the Movement</button>
         </div>
-
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">✓</div>
-                <strong>Verified Listings</strong><br>
-                Operator-confirmed, regularly updated
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🏆</div>
-                <strong>Free Certification</strong><br>
-                Window stickers for verified venues
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🗺️</div>
-                <strong>Sydney First</strong><br>
-                Launching with 200+ venues
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🌱</div>
-                <strong>Expanding Soon</strong><br>
-                More exclusions, more cities
-            </div>
-        </div>
-
-        <a href="#" class="cta-button">Get Your Restaurant Listed Free</a>
         
-        <p class="coming-soon">
-            Launching February 2026 • Sydney, Australia
-        </p>
+        <nav>
+            <h3>🗺️ Start Here</h3>
+            <div class="nav-links">
+                <a href="restaurants.html">
+                    <span class="icon">🍽️</span>
+                    Find Restaurants
+                </a>
+                <a href="submit.html">
+                    <span class="icon">✓</span>
+                    Get Verified
+                </a>
+                <a href="about.html">
+                    <span class="icon">ℹ️</span>
+                    Our Mission
+                </a>
+                <a href="blog.html">
+                    <span class="icon">📝</span>
+                    Stories & Research
+                </a>
+            </div>
+        </nav>
     </div>
+    
+    <footer>
+        <p><strong>OffLimitsFood</strong> — Conscious eating for Sydney</p>
+        <p>Vote with your wallet. Support restaurants that match your values.</p>
+        <p style="margin-top: 20px; font-size: 12px;">Built on the belief that ethical eating is possible. Coming soon to your city.</p>
+    </footer>
 </body>
 </html>
